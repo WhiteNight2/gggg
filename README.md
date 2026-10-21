@@ -5,7 +5,7 @@ HTML, CSS, JavaScript만 사용했으며 서버, 데이터베이스, 외부 API,
 
 ## 🔗 바로 실행하기
 
-https://WhiteNight2.github.io/jinwooda/
+https://WhiteNight2.github.io/gggg/
 
 ## 주요 기능
 
