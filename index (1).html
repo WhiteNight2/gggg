@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="메뉴를 등록하고 버튼 한 번으로 오늘의 메뉴를 추천받아 보세요.">
+  <title>오늘 뭐 먹지? | 메뉴 추천기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="brand">오늘 뭐 먹지?</span>
+      <span class="tagline">고민은 짧게, 식사는 맛있게</span>
+    </header>
+
+    <main class="layout">
+      <section class="stage" id="stage" aria-live="polite">
+        <div class="sun" aria-hidden="true"></div>
+        <p class="stage-label" id="stageLabel">오늘의 메뉴는</p>
+        <p class="stage-result idle" id="result">?</p>
+        <button id="pickBtn" class="pick-btn" type="button">메뉴 추천받기</button>
+      </section>
+
+      <section class="panel">
+        <h2>메뉴 등록</h2>
+        <form id="addForm" class="add-form" autocomplete="off" novalidate>
+          <input id="menuInput" type="text" maxlength="20" placeholder="먹고 싶은 메뉴를 입력하세요" aria-label="새 메뉴 이름">
+          <button id="addBtn" type="submit">추가</button>
+        </form>
+        <p id="message" class="message" role="status"></p>
+
+        <h2>내 메뉴 <span id="count" class="count"></span></h2>
+        <ul id="menuList" class="chips"></ul>
+        <p id="emptyGuide" class="empty" hidden>등록된 메뉴가 없어요.<br>위 입력칸에 메뉴를 먼저 등록해 주세요.</p>
+      </section>
+    </main>
+
+    <footer class="foot">새로고침하면 처음 메뉴 5개로 돌아와요.</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
