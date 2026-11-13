@@ -93,6 +93,15 @@ button { cursor: pointer; border: 0; }
   transition: background .15s;
 }
 .add-form button:hover { background: var(--forest-soft); }
+.panel select {
+  font: inherit; color: var(--forest); background: #fff;
+  border: 1px solid var(--line); border-radius: 999px; padding: 8px;
+}
+.category-filter {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin-bottom: 14px; font-weight: 600;
+}
+.menu-category { color: var(--muted); margin-inline: 4px; white-space: nowrap; }
 .add-form.shake { animation: shake .35s; }
 @keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 
@@ -128,4 +137,9 @@ button { cursor: pointer; border: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+}
+@media (max-width: 480px) {
+  .add-form { flex-wrap: wrap; border-radius: 20px; }
+  .add-form select { width: 100%; }
+  .add-form button { padding-inline: 16px; }
 }

@@ -25,18 +25,22 @@
       <section class="panel">
         <h2>메뉴 등록</h2>
         <form id="addForm" class="add-form" autocomplete="off" novalidate>
+          <select id="menuCategory" aria-label="등록할 메뉴의 카테고리"></select>
           <input id="menuInput" type="text" maxlength="20" placeholder="먹고 싶은 메뉴를 입력하세요" aria-label="새 메뉴 이름">
           <button id="addBtn" type="submit">추가</button>
         </form>
         <p id="message" class="message" role="status"></p>
 
         <h2>내 메뉴 <span id="count" class="count"></span></h2>
+        <label class="category-filter">목록·추천 카테고리
+          <select id="categoryFilter"><option value="">전체</option></select>
+        </label>
         <ul id="menuList" class="chips"></ul>
-        <p id="emptyGuide" class="empty" hidden>등록된 메뉴가 없어요.<br>위 입력칸에 메뉴를 먼저 등록해 주세요.</p>
+        <p id="emptyGuide" class="empty" hidden>이 카테고리에 등록된 메뉴가 없어요. 위에서 메뉴를 추가해 주세요.</p>
       </section>
     </main>
 
-    <footer class="foot">새로고침하면 처음 메뉴 5개로 돌아와요.</footer>
+    <footer class="foot">새로고침하면 처음 메뉴 목록으로 돌아와요.</footer>
   </div>
   <script src="script.js"></script>
 </body>
